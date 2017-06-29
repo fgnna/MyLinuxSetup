@@ -1,0 +1,37 @@
+#!/bin/bash
+#检查并安装shadowsocks环境后才开启错误退出检测
+set -e
+#开启代理
+turnOnProxy()
+{
+	gsettings set org.gnome.system.proxy.http host '127.0.0.1'
+	gsettings set org.gnome.system.proxy.http port 1080
+	gsettings set org.gnome.system.proxy.https host '127.0.0.1'
+        gsettings set org.gnome.system.proxy.http port 1080
+
+	gsettings set org.gnome.system.proxy mode 'manual'
+	echo "开启代理"
+}
+
+#关闭代理
+turnOffProxy()
+{
+	gsettings set org.gnome.system.proxy mode 'none'
+	echo "关闭代理"
+}
+
+
+
+
+if [ -z $1 ];then
+	echo "请输入参数[on/off]"
+	exit
+elif [ $1 = "on" ];then
+	turnOnProxy
+elif [ $1 = "off" ];then
+	turnOffProxy
+else
+	echo "不明的参数,请输入参数[on/off]"
+	exit
+fi
+
