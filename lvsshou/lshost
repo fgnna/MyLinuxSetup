@@ -1,0 +1,50 @@
+#!/bin/bash
+set -e
+
+if [ -z $ANDROID_SDK_PATH ];then
+	echo "错误：没找到环境变量 ANDROID_SDK_PATH"
+	echo "提示：确定环境变量已经设置，使用sudo -E 参数来执行脚本"
+	exit 1
+fi  
+
+system_images=${ANDROID_SDK_PATH}/system-images
+
+if [ ! -d $system_images ];then
+	echo "错误的镜像路径：$system_images"
+	exit 1
+fi
+
+
+#创建挂载镜像的位置
+mount_path="/mnt/android_image"
+
+if [ ! -d $mount_path ];then
+	mkdir $mount_path
+fi
+
+#查找所有镜像
+
+system_img_array=`find ${system_images} -name system.img`
+host_file="${mount_path}/etc/hosts"
+for img in ${system_img_array[*]}
+do
+	mount $img $mount_path
+
+	echo "127.0.0.1       localhost" > $host_file 
+	echo "::1             ip6-localhost" >> $host_file
+	if [ ! -z $1 ] && [ $1 = "test" ];then
+		echo "121.41.83.91    app.hxsapp.com" >> $host_file
+		echo "121.41.83.91    act.hxsapp.com" >> $host_file
+		echo "121.41.83.91    search.hxsapp.com" >> $host_file
+	fi
+	umount $mount_path
+done
+
+
+
+
+
+
+
+
+
