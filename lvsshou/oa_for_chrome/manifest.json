@@ -1,0 +1,16 @@
+{  
+    "manifest_version": 2, //固定的 
+    "name": "LS_OA", //插件名称 
+    "version": "1.0", //插件使用的版本 
+    "description": "绿瘦的OA系统插件，查考勤", //插件的描述 
+    "browser_action": 
+	{ //插件加载后生成图标 
+        "default_icon": "icon.png",//图标的图片 
+        "default_title": "绿瘦考勤插件", //鼠标移到图标显示的文字  
+		"default_popup": "popup.html"
+    },  
+    "permissions": 
+	[ //允许插件访问的url 
+        "http://oa.com/*"  
+    ]
+} 
