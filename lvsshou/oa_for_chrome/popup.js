@@ -114,7 +114,7 @@ function doWork()
 		
 		if(data[i][3] != data[i+1][3])
 			i -= 1;
-		if( (i+2) < data.length && data[i][3] == data[i+2][3] )
+		if( i!=-1 && (i+2) < data.length && data[i][3] == data[i+2][3] )
 			i += 1;		
 
 	}
@@ -223,7 +223,7 @@ function isLate(time)
 }
 
 /*
-判断是否迟到
+判断是否加班
 */
 function isOvertime(time)
 {
