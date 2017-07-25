@@ -1,5 +1,5 @@
 var beginYear = 2017;
-var beginMonth = 6;
+var beginMonth = 7;
 var curDate = new Date();
 curDate.setMonth(beginMonth);
 /* 将日期设置为0, 这里为什么要这样设置, 我不知道原因, 这是从网上学来的 */
