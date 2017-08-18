@@ -1,0 +1,168 @@
+
+10G	.
+
+4.0K	.2e24f5228cc47de8
+12K	.Android
+296K	.BD_SAPI_CACHE
+12K	.DataStorage
+48K	.IListen
+32K	.SystemConfig
+12K	.TouchPal_todo
+60K	.Touchpal_privacy
+56K	.UTSystemConfig
+4.0K	._android.dat
+4.0K	._driver.dat
+4.0K	.aio.dat
+4.0K	.appodeal
+52K	.com.chsdk.db
+12K	.com.chsdk.device
+28K	.com.taobao.dp
+2.2M	.here-maps
+488K	.im
+16K	.irsmonitorsdk
+12K	.jgads
+28K	.ktplay
+16K	.liepin
+4.0K	.lut
+16K	.mat
+64K	.qmt
+12K	.sfp
+12K	.stats
+8.0K	.sys.log
+16K	.tbs
+4.0K	.tcookieid
+24K	.the.pdfviewer3
+40K	.transportext                            
+8.0K	.xingse                                D 不明
+28K	360                                    D 360
+12K	360Download			       D 360	
+64K	360Log				       D 360
+8.0K	ACRCalls                               D 通话录音软
+8.0K	Alarms					 系统	
+1.2G	Android				         系统
+12K	ArcadeStore                            D 某商城   
+8.0K	Audio					 系统
+8.0K	BaiduMapSdk                              百度
+33M	BaiduNetdisk                             百度
+5.6M	BaiduPanoSDK                             百度
+8.0K	Bluetooth				 系统
+8.0K	Contact                                  系统  
+7.5M	DCIM                                     系统
+99M	DJI                                    D 大疆
+28K	DingTalk			       D 钉钉	
+8.0K	Document                               D 不明
+12K	Documents			         系统
+32M	Download                                 系统
+6.5M	GDTDOWNLOAD			       D 某下载软件
+16K	Hozdo-ldy-driver		       D 物流易
+8.0K	JFBCallVoice                           D 聚房宝
+32K	JuFuns				       D 聚房宝
+12K	MQ				       D 不明
+148K	Max				       D Max	
+56K	MaxPlus				       D Max+	
+160K	Mob				       D 魔拜
+8.0K	Movies					 系统文件
+8.0K	Music					 系统文件
+8.0K	Notifications				 系统文件
+8.0K	Others					 系统文件
+34M	Pictures				 系统文件
+8.0K	Podcasts				 系统文件
+164K	QQBrowser			       D QQ浏览器
+8.0K	QTAudioEngine			         三维音效库
+3.1M	Qmap				       D QQ地图
+3.0M	ROMs				       D 某游戏产生的文件  
+40K	RightOne			       D 不明应用
+8.0K	Ringtones				 铃声
+36K	Sdk				       D 不明SDK
+16K	SogouDownload			       D 搜狗
+16K	SpeedSense			       D 速度仪表盘
+16K	TAOBAOPLAYER			       D 淘宝玩家
+1.4M	TouchPalContact                        D 触宝电话
+12K	TuSDK				       D 涂图SDK
+32K	UCDownloads			       D 腾信浏览器
+4.0K	_0ServerSendToService.txt              D 不明某种log文件
+4.0K	_1ServiceAckToServer.txt	       D 不明某种log文件	
+4.0K	_2XgSdkReceiveFromXGService.txt	       D 不明某种log文件
+4.0K	_3SdkSendAckToService.txt	       D 不明某种log文件
+4.0K	_4ServiceRecAckFromSdk1.txt	       D 不明某种log文件
+4.0K	_5ServiceRecAckFromSdk2.txt	       D 不明某种log文件
+4.0K	_6ServiceRecAckFromSdk3.txt	       D 不明某种log文件	
+4.0K	_7ServiceRecAckFromServer.txt          D 不明某仲log文件
+125M	accdata				       D 优酷
+44K	accmeta                                D 优酷
+5.7M	air.tv.douyu.android                     斗鱼
+1.4G	alipay                                   支付宝
+8.0K	alt_autocycle                          D 不明空文件
+76M	amap                                     高得地图
+12K	at                                     D 某个用于设备唯一的指纹文件
+295M	autonavi			       D 高得导航
+6.8M	backup				       D 系统备份文件	
+120K	backups				       D 系统备份文件	 		
+1.0M	baidu                                    百度sdk
+16K	baidunavisdk                             百度SDK
+1.8M	bosszhipin			       D boss直聘
+1.1M	cmb				         招商很行
+1.7M	cmb.pb				         招商银行
+10M	com.KingOfTank.caohua                  D 坦克前线游戏
+24K	com.and.colourmedia.ewifi.nanjing      D 16wifi
+8.0K	com.eg.android.AlipayGphone              阿里应用
+28K	com.epai			       D 易拍
+4.0K	com.ixintui.push.tk                    D 某附带服务推送
+128K	com.kankunit.smartplugcronus	       D 控客，小K
+7.4M	com.kufeng.hj.enjoy                    D 好享瘦
+16K	com.qiongliao.qiongliao		       D 穷聊
+28K	com.showstartfans.activity	       D 不明 
+24K	com.taobao.fleamarket                  D 淘宝
+8.0K	com.tencent.mobileqq                     腾信QQ
+28K	com.ygkj.chelaile.standard             D 车来了
+588K	com.youdao.dict                        D 有道字典
+24K	com_nfyg_hsbb                          D 花生地铁
+4.0K	configmanager.json  D 不明，无用
+8.0K	crashs            D 异常报告
+4.0K	crashserror.log   D 异常报告
+32K	cvmomo		D 陌陌
+32K	data              系统文件
+60K	database          系统文件
+4.0K	deviceid.txt      某个软件用于记录设置唯一的指纹文件
+4.0K	dht.id          D 某个BT下载软件
+4.0K	dhtnodes.dat    D 某个BT下载软件
+16K	dji.go.v4       D 大疆
+13M	douyu             斗鱼
+8.0K	douyu_img         斗鱼
+60K	emlibs            环信
+18M	fotoable        D 云图科技
+20K	gamersky        D 游民星空
+17M	gzmetro         D 广州地铁
+2.1G	hce_minidmp     D 系统错误报告文件，log记录，可清除
+1.6M	hsad		D 不明 无用
+28K	hsapp           D 好享瘦
+36M	iaround         D 社交软件 遇见
+76K	ikonke          D 控客 小K插座
+4.7M	imageloader     D 第三方图片加载器缓存文件
+56M	immomo          D 陌陌
+48K	ixintui         D 附带服务SDK文件
+8.0K	keep		D 不明 无用
+32K	ktplay          D 友盟的游戏社交SDK文件
+524K	lagou           D 拉勾
+88K	libs              系统文件，好像是各应用db文件
+19M	liepin          D 猎聘
+3.6M	lvshou          D 好享瘦
+644K	mfcache         D 某个软件的缓存文件
+28K	msc		D 不明，无用
+96K	ndownloads      D 不明，无用      
+218M	netease              D 网易云音乐
+16K	netease_pushservice  D 网易的推送文件
+120K	package.json    D 某种指纺文件
+12K	qmt             D 不明
+16K	qt              D 不明，无用
+9.1M	rtmap           D 智图科技，之前装过的某个应用残留
+12K	setup		D 不明
+12K	sitemp          D  某种网站抓取协议临时文件
+2.3M	system            系统临时文件
+148K	systemadsame    D  第三方广告sdk文件
+68K	tbs               腾讯浏览器内核文件
+16K	tempShare1      D  不明
+3.8G	tencent
+32K	umeng_cache     D  友盟缓存 
+128K	wanda           D  万达
+2.7M	youku
