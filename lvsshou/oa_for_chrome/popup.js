@@ -314,12 +314,13 @@ function totletime()
 	var endDate = testDate.Format("yyyy-MM-dd"); 
 	testDate.setMonth(testDate.getMonth()-6);
 	var startDate = testDate.Format("yyyy-MM-dd");
-	var url = "http://oa.com/Pages/Ec/EcLeave/Default.aspx?action=GridBindList&command=Query&leaveType=&startDate=" + startDate + "&endDate=" + endDate + "&keywords=&time=Fri%20Aug%2018%202017%2014:10:38%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=20&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=LeaveHours";
+	var url = "http://oa.com/Pages/Ec/EcLeave/Default.aspx?action=GridBindList&command=Query&leaveType=06&startDate=" + startDate + "&endDate=" + endDate + "&keywords=&time=Fri%20Aug%2018%202017%2014:10:38%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=1000&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=LeaveHours";
 	
 	var req = new XMLHttpRequest();
     	req.open("GET", url, false);
     	req.send(null);
     	var data = JSON.parse(req.responseText).data;
+    	
     	var totleLeavetime = 0.0;
     	if(data.length > 0)
     	{
@@ -436,18 +437,12 @@ function isOvertime(time)
 */
 function fixLate()
 {
-	var objE = document.getElementById("noooooooooooooo");
-	var html = "";
 	for(var i=0; i < lateList.length ; i++)
 	{
-		html += lateList[i].date +" " + lateList[i].time +  " " + mathLeaveTime(lateList[i].time) + "<br/>"
 		add(lateList[i].date,lateList[i].time)
 	}
 	document.getElementById("submitButton").style.visibility="hidden";
 	location.reload();
-	//objE.innerHTML = html;
-	
-	
 }
 
 
