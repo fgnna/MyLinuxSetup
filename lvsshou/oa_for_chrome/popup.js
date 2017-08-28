@@ -152,7 +152,17 @@ function doWork()
 				}
 				else
 				{
-					lateList.push({"date":mouthData[i],"time":start});	
+					if(overtimeResposeText[mouthData[i]])
+					{
+						var overTimeStart = parseInt(overtimeResposeText[mouthData[i]][0].split(":")[0]);
+						if(overTimeStart >= 18)//当天有加班时间的情况下，从下午6点后开始的，才加入自动填补休单列表 
+							lateList.push({"date":mouthData[i],"time":start});	
+						
+					}
+					else
+					{
+						lateList.push({"date":mouthData[i],"time":start});	
+					}
 					row += td("") + td("")+ td("");
 				}
 			}
