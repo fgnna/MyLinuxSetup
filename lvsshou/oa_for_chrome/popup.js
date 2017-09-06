@@ -16,6 +16,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
 
 var beginYear = 2017;
 var beginMonth = 0;
+var endMonth = 0;
 var curDate = new Date();
 
 /*
@@ -36,9 +37,22 @@ curDate.setDate(0);
 
 /* 返回当月的天数 */
 var maxDays = curDate.getDate();
-
 var beginDateStr = beginYear + "-" + toDoubleString(beginMonth) + "-01";
-var endDateStr = beginYear + "-" + toDoubleString(beginMonth)+"-" + maxDays;
+
+/*
+计算下个月的第一天，由于接口对于endDate参数是用小于条件，所以 要用下月1号作为endDate,否则查询不到当月的最后一天
+*/
+var endDate = new Date();
+if(new Date().getDate() > 10 )
+{
+	endMonth = curDate.getMonth()+2;
+}
+else
+{
+	endMonth = curDate.getMonth()+1;
+}
+endDate.setMonth(endMonth)
+var endDateStr = endDate.getFullYear() + "-" + toDoubleString(endDate.getMonth()+1) +  "-01";
 
 
 var weekNames = "日一二三四五六".split("");
@@ -58,11 +72,11 @@ for(var i=1;i <= maxDays ; i++)
 }
 
 //打卡列表
-var cardsUrl="http://oa.com/Pages/Hr/EmployeeAttendance/EmployeeCardData.aspx?action=GridBindList&BeginTime=" + beginDateStr + "&EndTime="+endDateStr+"&time=Mon%20Jul%2003%202017%2012:10:46%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=50&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=UserName%2CWorkNo%2CDepartment%2CDDate%2CDTime";
+var cardsUrl="http://oa.com/Pages/Hr/EmployeeAttendance/EmployeeCardData.aspx?action=GridBindList&BeginTime=" + beginDateStr + "&EndTime="+endDateStr+"&time=Mon%20Jul%2003%202017%2012:10:46%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=100&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=UserName%2CWorkNo%2CDepartment%2CDDate%2CDTime";
 var cardsResposeText;
 
 //已提交的加班时间列表
-var overtimeUrl="http://oa.com/Pages/Ec/EcOverTime/Default.aspx?action=GridBindList&command=Query&keywords=&compensation=0&time=Mon%20Jul%2003%202017%2014:18:04%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=50&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=OverTimeId%2C%2C%2CNowStep%2CBillNo%2CRealName%2CCode%2CFullName%2CCreateDate%2CBeginDate%2CEndDate%2COverTimeHours%2CCompensationText"
+var overtimeUrl="http://oa.com/Pages/Ec/EcOverTime/Default.aspx?action=GridBindList&command=Query&keywords=&compensation=0&time=Mon%20Jul%2003%202017%2014:18:04%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=100&pqGrid_OrderField=&pqGrid_OrderType=desc&pqGrid_Sort=OverTimeId%2C%2C%2CNowStep%2CBillNo%2CRealName%2CCode%2CFullName%2CCreateDate%2CBeginDate%2CEndDate%2COverTimeHours%2CCompensationText"
 var overtimeResposeText;
 
 //已提交的补休时间列表
@@ -70,7 +84,7 @@ var leaveUrl="http://oa.com/Pages/Ec/EcLeave/Default.aspx?action=GridBindList&co
 var leaveResposeText;
 
 //未提交的补休时间列表
-var leaveUrlNotCommit = "http://oa.com/Pages/Ec/EcLeave/Default.aspx?action=GridBindList&command=Default&leaveType=&startDate=" + beginDateStr + "&endDate="+endDateStr+"&keywords=&time=Wed%20Aug%2009%202017%2016:51:00%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=20&OrderField_pqGrid=&pqGrid_OrderType=desc&pqGrid_Sort=LeaveId%2C%2C%2CNowStep%2CBillNo%2CRealName%2CCode%2CFullName%2CItemName%2CCreateDate%2CBeginDate%2CEndDate%2CLeaveHours"
+var leaveUrlNotCommit = "http://oa.com/Pages/Ec/EcLeave/Default.aspx?action=GridBindList&command=Default&leaveType=&startDate=" + beginDateStr + "&endDate="+endDateStr+"&keywords=&time=Wed%20Aug%2009%202017%2016:51:00%20GMT+0800%20(CST)&pqGrid_PageIndex=1&pqGrid_PageSize=100&OrderField_pqGrid=&pqGrid_OrderType=desc&pqGrid_Sort=LeaveId%2C%2C%2CNowStep%2CBillNo%2CRealName%2CCode%2CFullName%2CItemName%2CCreateDate%2CBeginDate%2CEndDate%2CLeaveHours"
 var leaveUrlNotCommitResposeText;
 
 document.addEventListener('DOMContentLoaded', function () 
@@ -107,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function ()
 		document.getElementById("submitButton").style.visibility="hidden";
 		
 	}
-	
+	//document.getElementById("noooooooooooooo").innerHTML = leaveUrl
 	totletime();
 });
 
@@ -168,6 +182,8 @@ function doWork()
 			}
 			else
 			{
+			
+			
 				row += td("") + td("")+ td("");
 			}
 			
@@ -189,7 +205,25 @@ function doWork()
 		}
 		else
 		{
-			row += td("") + td("") + td("") + td("")+ td("")+ td("") + td("")+ td("");
+			row += td("") + td("")  ;
+			if(leaveUrlNotCommitResposeText[mouthData[i]])
+			{
+				var leave = leaveUrlNotCommitResposeText[mouthData[i]];
+				row += td(leave[0]) + td(leave[1]) + td(leave[2]);
+				sumLeaveTime +=  parseFloat(leaveUrlNotCommitResposeText[mouthData[i]][2]);
+				row += td("")+ td("")+ td("");
+			}
+			else if(leaveResposeText[ mouthData[i]])
+			{
+				var leave = leaveResposeText[ mouthData[i] ];
+				row += td(leave[0]) + td(leave[1]) + td(leave[2]);
+				sumLeaveTime +=  parseFloat(leaveResposeText[mouthData[i]][2]);
+				row += td("")+ td("")+ td("");
+			}
+			else
+			{
+				row +=  td("")+ td("")+ td("") + td("")+ td("")+ td("");
+			}
 		}
 		html += tr(row);
 	}
@@ -485,6 +519,8 @@ function add(fullDate,morningTime)
 */
 function mathLeaveTime(time)
 {
+	return time;
+	/*
 	var time = time.split(":")
 	var hour = parseInt(time[0]);
 	var minute = parseInt(time[1]);
@@ -496,6 +532,7 @@ function mathLeaveTime(time)
 	{
 		return toDoubleString(hour+1)+":00:00";	
 	}
+	*/
 }
 
 
