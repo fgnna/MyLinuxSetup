@@ -33,11 +33,14 @@ do
 	echo "127.0.0.1       localhost" > $host_file 
 	echo "::1             ip6-localhost" >> $host_file
 	if [ ! -z $1 ] && [ $1 = "test" ];then
-		echo "121.41.83.91    app.hxsapp.com" >> $host_file
-		echo "121.41.83.91    act.hxsapp.com" >> $host_file
-		echo "121.41.83.91    search.hxsapp.com" >> $host_file
-		echo "121.41.83.91    bonus.hxsapp.com" >> $host_file
-		echo "121.41.83.91    mall.hxsapp.com" >> $host_file
+		echo "121.41.83.91 app.hxsapp.com" >> $host_file
+		echo "121.41.83.91 act.hxsapp.com" >> $host_file
+		echo "121.41.83.91 search.hxsapp.com" >> $host_file
+		echo "121.41.83.91 bonus.hxsapp.com" >> $host_file
+		echo "121.41.83.91 mall.hxsapp.com" >> $host_file
+		echo "121.41.83.91 gym.hxsapp.com" >> $host_file
+		echo "121.41.83.91 account.hxsapp.com" >> $host_file
+		echo "121.41.83.91 base.hxsapp.com" >> $host_file
 	fi
 	umount $mount_path
 done
