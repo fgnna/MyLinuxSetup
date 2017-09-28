@@ -519,8 +519,6 @@ function add(fullDate,morningTime)
 */
 function mathLeaveTime(time)
 {
-	return time;
-	/*
 	var time = time.split(":")
 	var hour = parseInt(time[0]);
 	var minute = parseInt(time[1]);
@@ -532,7 +530,7 @@ function mathLeaveTime(time)
 	{
 		return toDoubleString(hour+1)+":00:00";	
 	}
-	*/
+	return time;
 }
 
 
