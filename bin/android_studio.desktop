@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Exec="/home/je/develop/android-studio/bin/studio.sh" %f
+Icon=/home/je/develop/android-studio/bin/studio.png
+Categories=development;IDE;
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-android-studio
