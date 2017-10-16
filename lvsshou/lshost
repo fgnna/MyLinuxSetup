@@ -42,6 +42,7 @@ do
 		echo "121.41.83.91 account.hxsapp.com" >> $host_file
 		echo "121.41.83.91 base.hxsapp.com" >> $host_file
 		echo "121.41.83.91 api.hxsapp.com" >> $host_file
+		echo "121.41.83.91 hxsweb.hxsapp.com" >> $host_file
 	fi
 	umount $mount_path
 done
