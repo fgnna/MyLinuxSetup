@@ -9,12 +9,14 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
-121.199.0.193 app.hxsapp.com
-121.199.0.193 act.hxsapp.com 
-121.199.0.193 search.hxsapp.com
-121.199.0.193 bonus.hxsapp.com
-121.199.0.193 mall.hxsapp.com
-121.199.0.193 gymweb.hxsapp.com
-121.199.0.193 account.hxsapp.com
-121.199.0.193 base.hxsapp.com
-121.199.0.193 api.hxsapp.com
+121.41.83.91 app.hxsapp.com
+121.41.83.91 act.hxsapp.com 
+121.41.83.91 search.hxsapp.com
+121.41.83.91 bonus.hxsapp.com
+121.41.83.91 mall.hxsapp.com
+121.41.83.91 gymweb.hxsapp.com
+121.41.83.91 account.hxsapp.com
+121.41.83.91 base.hxsapp.com
+121.41.83.91 api.hxsapp.com
+121.41.83.91 hxsweb.hxsapp.com
+121.41.83.91 gym.hxsapp.com
