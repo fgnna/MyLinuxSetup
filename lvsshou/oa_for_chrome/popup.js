@@ -23,7 +23,8 @@ var curDate = new Date();
 每月10号前显示上月记录
 10号后显示当月记录
 */
-if(curDate.getDate() > 10 )
+
+if(curDate.getDate() > 5 )
 {
 	beginMonth = curDate.getMonth()+1;
 }
@@ -32,18 +33,17 @@ else
 	beginMonth = curDate.getMonth();
 }
 beginYear = curDate.getFullYear();
+curDate.setDate(1);
 curDate.setMonth(beginMonth);
 curDate.setDate(0);
-
 /* 返回当月的天数 */
 var maxDays = curDate.getDate();
 var beginDateStr = beginYear + "-" + toDoubleString(beginMonth) + "-01";
-
 /*
 计算下个月的第一天，由于接口对于endDate参数是用小于条件，所以 要用下月1号作为endDate,否则查询不到当月的最后一天
 */
 var endDate = new Date();
-if(new Date().getDate() > 10 )
+if(new Date().getDate() > 5 )
 {
 	endMonth = curDate.getMonth()+2;
 }
@@ -51,6 +51,7 @@ else
 {
 	endMonth = curDate.getMonth()+1;
 }
+endDate.setDate(1)
 endDate.setMonth(endMonth)
 var endDateStr = endDate.getFullYear() + "-" + toDoubleString(endDate.getMonth()+1) +  "-01";
 

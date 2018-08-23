@@ -10,6 +10,9 @@ turnOnProxy()
         gsettings set org.gnome.system.proxy.http port 1080
 
 	gsettings set org.gnome.system.proxy mode 'manual'
+
+ 	python /home/shaojunjie/develop/projectSource/shadowsocksr/shadowsocks/local.py -c /home/shaojunjie/develop/projectSource/shadowsocksr/shadowsocks/config.json -d start
+
 	echo "开启代理"
 }
 
