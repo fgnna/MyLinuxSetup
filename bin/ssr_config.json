@@ -1,0 +1,26 @@
+{
+    "server": "27.0.232.187",
+    "server_ipv6": "::",
+    "server_port": 4825,
+    "local_address": "127.0.0.1",
+    "local_port": 1081,
+
+    "password": "Efhh2y",
+    "method": "aes-256-cfb",
+    "protocol": "auth_chain_a",
+    "protocol_param": "",
+    "obfs":"tls1.2_ticket_auth",
+    "obfs_param": "cloudfront.com,cloudflare.com,akamaitechnologies.com,cdn.jsdelivr.net,cn.bing.com",
+    "speed_limit_per_con": 0,
+    "speed_limit_per_user": 0,
+
+    "additional_ports" : {},
+    "additional_ports_only" : false, 
+    "timeout": 300,
+    "udp_timeout": 60,
+    "dns_ipv6": false,
+    "connect_verbose_info": 0,
+    "redirect": "",
+    "fast_open": false,
+    "workers":1
+}
