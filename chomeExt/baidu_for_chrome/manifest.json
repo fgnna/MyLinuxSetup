@@ -1,0 +1,30 @@
+{  
+    "manifest_version": 3, //固定的 
+    "name": "baidu", //插件名称 
+    "version": "2.0", //插件使用的版本 
+    "description": "百度插件", //插件的描述 
+    "browser_action": 
+	{ //插件加载后生成图标 
+        "default_icon": "icon.png",//图标的图片 
+        "default_title": "百度插件" //鼠标移到图标显示的文字  
+		//"default_popup": "popup.html"
+    },  
+	"content_scripts":
+	[
+		{
+		    "matches": ["https://www.baidu.com/*"],
+		    // "<all_urls>" 表示匹配所有地址
+		    //"matches": ["<all_urls>"],
+		    // 多个JS按顺序注入
+		    "js": ["popup.js"],
+		    // JS的注入可以随便一点，但是CSS的注意就要千万小心了，因为一不小心就可能影响全局样式
+		    "css": ["css.css"],
+		    // 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+		    "run_at": "document_start"
+		}
+	],
+    "permissions": 
+	[ //允许插件访问的url 
+        "https://www.baidu.com/*"  
+    ]
+} 

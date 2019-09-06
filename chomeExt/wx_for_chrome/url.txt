@@ -1,0 +1,35 @@
+#获取添加补休审批的HTML URL，取DOM里的订单ID
+http://oa.com/Pages/Ec/EcLeave/EditForm.aspx?workflowId=59621a4c-981d-4aa6-9e24-4cd414ff0b74
+
+#提交为post form-data 格式
+http://oa.com/Pages/Ec/EcLeave/EditForm.aspx?workflowId=59621a4c-981d-4aa6-9e24-4cd414ff0b74
+
+#参数为：
+"__EVENTTARGET"=
+"__EVENTARGUMENT"=
+"__VIEWSTATE"=/wEPDwULLTE0MjE2OTQyMzQPZBYCAgMPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWAgIJDxAWBh4ORGF0YVZhbHVlRmllbGQFCEl0ZW1Db2RlHg1EYXRhVGV4dEZpZWxkBQhJdGVtTmFtZR4LXyFEYXRhQm91bmRnEBUJDT096K+36YCJ5oupPT0G5LqL5YGHBueXheWBhwblqZrlgYcG5Lqn5YGHBuS4p+WBhwbooaXkvJEJ5bm05LyR5YGHD+iuoeWIkueUn+iCsuWBhxUJAAIwMQIwMgIwMwIwNAIwNQIwNgIwNwIwOBQrAwlnZ2dnZ2dnZ2dkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQULSXNBZGRBdHRhY2i/l/ekKUqnQVLCALgZhp/MMPVFsQ==
+
+"__EVENTVALIDATION"=/wEWEwKN8PkrAuezytgLArr/p5IPAtK/j4cKAszImQ0Cze3P7wkCirHU1AgC+o7f2Q4C5br97QoCwqzWjgcCuNKFug4CnImL8gwCmu/Thw8C0vTzrgYCkfuA7QgCsunj/wQCs7PZkwoCoKewoQoCwKrK4AjoKGezRANt8+cPiQsDmNY0UfhRIw==
+
+"hidOriginalName"=
+"hidOldFileName"=
+"hidNewFileName"=
+"BillNo"=从上一个请求获取
+"LeaveType"=06
+"DateType"=2
+"BeginDate"=2017-07-31 09:00:00
+"EndDate"=2017-07-31 09:30:00
+"LeaveHours"=0.5
+"Specific"=补休
+"Proxy"=
+"ProxyPhone"=
+"ProxyDuty"=
+"ProxyMatter"=
+"Contact"=
+"ContactPhone"=
+"IsAddAttach"=on
+
+
+
+
+------WebKitFormBoundaryvIB91BhDDzbsJ7Gb--

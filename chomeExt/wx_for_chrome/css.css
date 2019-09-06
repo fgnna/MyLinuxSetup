@@ -1,0 +1,52 @@
+body {
+	background:#000000 !important;
+}
+.box{
+	background:#000000 !important;
+}
+.bubble{
+	color:#fff !important;
+}
+
+.message .avatar{
+	display:none;
+}
+
+
+.bubble_cont{
+	background:#000000;
+}
+
+.message .nickname{
+	color:#eee !important;
+}
+
+.box_hd .title_wrap{
+	background:#000000 !important;
+}
+
+.chat .box_ft .content .flex{
+	background:#000000 !important;
+	color:#fff !important;
+}
+.header{
+	display:none;
+}
+.chat_item.top{
+	background:#000000 !important;
+}
+.panel{
+	background:#000000 !important;
+    width: 130px !important;
+
+}
+
+.chat_item .avatar .img{
+	display:none !important;
+}
+
+.tab .tab_item a{
+	height:10px;
+}
+
+

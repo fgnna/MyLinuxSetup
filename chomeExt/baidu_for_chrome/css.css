@@ -1,0 +1,28 @@
+body {
+	background:#242424 !important;
+}
+#head {
+	background:#242424 !important;
+}
+#u1 a.mnav, #u1 a.mnav:visited{
+	color:#fff !important;
+}
+.c-abstract{
+	color:#fff !important;
+}
+.t{
+	color:#fff !important;
+}
+#s_tab{
+background:#242424 !important;
+}
+
+.s_form{
+background:#242424 !important;
+}
+.s_ipt{
+color:#fff !important;
+}
+a:-webkit-any-link{
+	color:#fff !important;
+}
