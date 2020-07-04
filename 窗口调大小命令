@@ -1,0 +1,44 @@
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && HALF=$(($WIDTH/2)) && wmctrl -r :ACTIVE: -b add,maximized_vert && wmctrl -r :ACTIVE: -e 0,0,0,$HALF,-1
+
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$(($HEIGHT/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,0,0,$WIDTH,$HEIGHT
+
+
+
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$(($HEIGHT/2-50)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,0,$WIDTH,$HEIGHT
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$(($HEIGHT/2-50)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,$(($HEIGHT+50)),$WIDTH,$HEIGHT
+
+
+
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$((($HEIGHT-90)/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,0,$WIDTH,$HEIGHT
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$((($HEIGHT-90)/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,$(($HEIGHT)),$WIDTH,$HEIGHT
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$((($HEIGHT-90)/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,$(($HEIGHT)),$WIDTH,$HEIGHT
+
+
+左
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,0,0,$WIDTH,$HEIGHT
+
+右
+
+WIDTH=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 1 -d 'x'` && WIDTH=$(($WIDTH/2)) && echo $WIDTH && HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,$WIDTH,0,$WIDTH,$HEIGHT
+
+上
+
+HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,-1,0,-1,$(($HEIGHT/2))
+
+下
+
+
+
+HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$((($HEIGHT-90)/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,-1,0,-1,$HEIGHT
+
+HEIGHT=`xdpyinfo | grep 'dimensions:' | cut -f 2 -d ':' | cut -f 2 -d 'x' | cut -f 1 -d ' '` && HEIGHT=$((($HEIGHT-90)/2)) && echo $HEIGHT && wmctrl -r :ACTIVE: -e 0,-1,$HEIGHT,-1,$HEIGHT
+
+
+wmctrl -r :ACTIVE: -l
