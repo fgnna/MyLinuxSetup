@@ -1,0 +1,12 @@
+tmux split-window -b  横向分割
+tmux split-window -h  竖向分割
+tmux new -d -s dev vi /etc/passwd  新会话并执行一个命令
+tmux split-window -b -t 2  vi /etc/passwd     指定一个pane分割窗口并执行命令，  pane 名字是 0 1 2 3 按创建顺序
+tmux attach -t dev               进行指定会话
+
+
+tmux new-session -d -s dev ping 192.168.1.1
+tmux split-window -b ping 192.168.1.1
+tmux split-window -h -t 0 ping 192.168.1.1
+tmux split-window -h -t 2 ping 192.168.1.1
+tmux attach -t dev
